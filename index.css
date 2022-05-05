@@ -7,13 +7,52 @@
 }
 
 :root {
+  /* COLORS */
   --primary-color: #00856f;
   --headline: #212529;
   --paragraph: #495057;
   --bg-beige: #fffaf1;
   --bg-green-light: #dce9e2;
 
+  /* SIZES */
+  --mobile-width: 37.5rem;
+  --mobile-height: 7.2rem;
+
   font-size: 10px;
+}
+
+.wrapper {
+  padding: 2.4rem;
+}
+
+nav {
+  transition: 400ms;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--mobile-width);
+  height: var(--mobile-height);
+  margin: auto;
+}
+
+nav.scroll {
+  background-color: var(--primary-color);
+}
+
+nav.scroll svg:nth-child(1) path {
+  fill: white;
+}
+
+nav.scroll svg:nth-child(2) path {
+  stroke: white;
 }
 
 header::before {
@@ -22,14 +61,16 @@ header::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 108rem;
+  width: 100%;
+  height: calc(108rem + var(--mobile-height));
   background-color: var(--bg-green-light);
 }
 
 header {
   text-align: center;
-  padding: 2.4rem;
+  margin-top: var(--mobile-height);
+  margin-inline: auto;
+  width: var(--mobile-width);
 }
 
 h1 {
@@ -52,7 +93,7 @@ h2 {
   margin-bottom: 3.2rem;
 }
 
-a {
+header a {
   display: flex;
   width: 263px;
   margin: 0 auto 3.75rem;
@@ -64,7 +105,7 @@ a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-a p {
+header a p {
   color: #ffffff;
   font-weight: 700, bold;
   font-size: 1.4rem;
