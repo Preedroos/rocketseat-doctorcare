@@ -7,6 +7,7 @@
   --paragraph: #495057;
   --bg-beige: #fffaf1;
   --bg-green-light: #dce9e2;
+  --bg-green-light-2: #f7f9f9;
 
   /* SIZES */
   --mobile-width: 37.5rem;
@@ -16,6 +17,7 @@
 }
 
 /*==================== GENERAL ====================*/
+
 * {
   margin: 0;
   padding: 0;
@@ -23,8 +25,39 @@
   font-family: 'DM Sans', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow: overlay;
+  background-color: var(--bg-green-light-2);
+}
+
+h1 {
+  color: #00856f;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #212529;
+  font-weight: 700;
+  font-size: 3.4rem;
+  margin-bottom: 2.4rem;
+}
+
+h3 {
+  color: #212529;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+p {
+  font-size: 1.6rem;
+  color: var(--paragraph);
 }
 
 ul {
@@ -50,6 +83,7 @@ a {
 }
 
 /*==================== MENU ====================*/
+
 nav {
   transition: 400ms;
   position: fixed;
@@ -74,6 +108,7 @@ nav .wrapper {
 
 nav.scroll {
   background-color: var(--primary-color);
+  z-index: 1;
 }
 
 nav.scroll .logo path {
@@ -90,6 +125,7 @@ nav.scroll .nav-open path {
 }
 
 /*==================== MENU-EXPANDED ====================*/
+
 body.menu-expanded {
   overflow: hidden;
 }
@@ -152,6 +188,8 @@ body.menu-expanded .social-links {
   justify-content: center;
 }
 
+/*==================== HEADER ====================*/
+
 header::before {
   content: '';
   z-index: -1;
@@ -165,27 +203,12 @@ header::before {
 
 header {
   text-align: center;
-  margin-top: var(--mobile-height);
+  padding-top: var(--mobile-height);
   margin-inline: auto;
   width: var(--mobile-width);
 }
 
-h1 {
-  color: #00856f;
-  font-weight: 700;
-  font-size: 1.4rem;
-  margin-bottom: 1.6rem;
-}
-
-h2 {
-  color: #212529;
-  font-weight: 700;
-  font-size: 3.4rem;
-  margin-bottom: 2.4rem;
-}
-
 #header-p {
-  color: #495057;
   font-size: 1.8rem;
   margin-bottom: 3.2rem;
 }
@@ -198,7 +221,7 @@ header a {
 }
 
 header a p {
-  color: #ffffff;
+  color: white;
   font-size: 1.4rem;
 }
 
@@ -229,4 +252,26 @@ header a p {
 .stat p {
   font-size: 1.6rem;
   color: var(--primary-color);
+}
+
+/*==================== SERVICES ====================*/
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  margin-top: 6rem;
+}
+
+.card {
+  width: 32.7rem;
+  padding: 2.4rem;
+  background-color: white;
+  border: 1px solid var(--bg-green-light);
+  border-radius: 6px;
+}
+
+.card h3 {
+  margin: 1.6rem auto;
 }

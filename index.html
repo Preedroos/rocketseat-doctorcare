@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body onscroll="onScroll()">
+
     <nav id="navigation">
       <div class="wrapper">
         <a href="#" class="logo"
@@ -64,9 +65,9 @@
 
         <div class="menu">
           <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Serviços</a></li>
+            <li><a onclick="closeMenu()" href="#home">Início</a></li>
+            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
+            <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
             <li><a class="button" href="#">Agende sua consulta</a></li>
           </ul>
 
@@ -202,42 +203,100 @@
       </div>
     </nav>
 
-    <header class="wrapper">
-      <h1>BOAS-VINDAS A DOCTORCARE 👋</h1>
-      <h2>Assistência médica simplificada para todos</h2>
-      <p id="header-p">
-        Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz
-        de sua doença e proporcionar uma cura a longo prazo.
-      </p>
-      <a class="button" href="#">
-        <img src="assets/icon-whatsapp.svg" alt="" />
-        <p>Agende sua consulta</p>
-      </a>
-
-      <img
-        id="header-img"
-        src="assets/foto.png"
-        alt="Mulher negra vestindo moletom verde e sorrindo"
-      />
-
-      <div class="stats">
-        <div class="stat">
-          <h3>+3.500</h3>
-          <p>Pacientes atendidos</p>
-        </div>
-
-        <div class="stat">
-          <h3>+15</h3>
-          <p>Especialistas disponíveis</p>
-        </div>
-
-        <div class="stat">
-          <h3>+10</h3>
-          <p>Anos no mercado</p>
+    <header id="home">
+      <div class="wrapper">
+        <h1>BOAS-VINDAS A DOCTORCARE 👋</h1>
+        <h2>Assistência médica simplificada para todos</h2>
+        <p id="header-p">
+          Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz
+          de sua doença e proporcionar uma cura a longo prazo.
+        </p>
+        <a class="button" href="#">
+          <img src="assets/icon-whatsapp.svg" alt="" />
+          <p>Agende sua consulta</p>
+        </a>
+        <img
+          id="header-img"
+          src="assets/foto.png"
+          alt="Mulher negra vestindo moletom verde e sorrindo"
+        />
+        <div class="stats">
+          <div class="stat">
+            <h3>+3.500</h3>
+            <p>Pacientes atendidos</p>
+          </div>
+          <div class="stat">
+            <h3>+15</h3>
+            <p>Especialistas disponíveis</p>
+          </div>
+          <div class="stat">
+            <h3>+10</h3>
+            <p>Anos no mercado</p>
+          </div>
         </div>
       </div>
     </header>
 
+    <section id="services">
+      <div class="wrapper">
+        <header>
+          <h1>Serviços</h4>
+          <h2>Como podemos ajudá-lo a se sentir melhor?</h2>
+        </header>
+
+        <div class="cards">
+          <div class="card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+              <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3>Problemas Digestivos</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem reiciendis possimus officiis obcaecati. Tempora, maiores? Illo consequuntur</p>
+          </div>
+          <div class="card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+              <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3>Saúde Hormonal</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem reiciendis possimus officiis obcaecati. Tempora, maiores? Illo consequuntur</p>
+          </div>
+          <div class="card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+              <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3>Bem-Estar Mental</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem reiciendis possimus officiis obcaecati. Tempora, maiores? Illo consequuntur</p>
+          </div>
+          <div class="card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+              <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3>Cuidados Pediátricos</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem reiciendis possimus officiis obcaecati. Tempora, maiores? Illo consequuntur</p>
+          </div>
+          <div class="card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+              <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3>Autoimune e Inflamação</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem reiciendis possimus officiis obcaecati. Tempora, maiores? Illo consequuntur</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrapper">
+
+      </div>
+    </section>
+
+    <!-------------------- SCRIPTS -------------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="index.js"></script>
   </body>
 </html>

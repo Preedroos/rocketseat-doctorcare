@@ -19,3 +19,18 @@ function closeMenu() {
     navigation.classList.remove('scroll')
   }
 }
+
+ScrollReveal({
+  origin: 'top',
+  distance: '50px',
+  duration: 1500
+}).reveal(`
+#header-p,
+.stat,
+.card`)
+
+ScrollReveal({
+  origin: 'bottom',
+  distance: '50px',
+  duration: 1500
+}).reveal(`#home .button`)
