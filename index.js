@@ -9,14 +9,12 @@ function onScroll() {
 function openMenu() {
   if (!document.body.classList.contains('menu-expanded')) {
     document.body.classList.add('menu-expanded')
-    navigation.classList.add('scroll')
   }
 }
 
 function closeMenu() {
   if (document.body.classList.contains('menu-expanded')) {
     document.body.classList.remove('menu-expanded')
-    navigation.classList.remove('scroll')
   }
 }
 
@@ -25,7 +23,6 @@ ScrollReveal({
   distance: '50px',
   duration: 1500
 }).reveal(`
-#header-p,
 .stat,
 .card`)
 
@@ -33,4 +30,28 @@ ScrollReveal({
   origin: 'bottom',
   distance: '50px',
   duration: 1500
-}).reveal(`#home .button`)
+}).reveal(`
+#home .button,
+#contact .button`)
+
+ScrollReveal({
+  origin: 'left',
+  distance: '50px',
+  duration: 500
+}).reveal(`header h1`)
+
+ScrollReveal({
+  origin: 'left',
+  distance: '50px',
+  duration: 1000
+}).reveal(`
+header h2,
+header h3`)
+
+ScrollReveal({
+  origin: 'left',
+  distance: '50px',
+  duration: 1500
+}).reveal(`
+header p,
+#about p`)
