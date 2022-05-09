@@ -1,9 +1,6 @@
 function onScroll() {
-  if (scrollY > 0) {
-    navigation.classList.add('scroll')
-  } else {
-    navigation.classList.remove('scroll')
-  }
+  showAltNav()
+  showUpButton()
 }
 
 function openMenu() {
@@ -15,6 +12,22 @@ function openMenu() {
 function closeMenu() {
   if (document.body.classList.contains('menu-expanded')) {
     document.body.classList.remove('menu-expanded')
+  }
+}
+
+function showAltNav() {
+  if (scrollY > 0) {
+    navigation.classList.add('scroll')
+  } else {
+    navigation.classList.remove('scroll')
+  }
+}
+
+function showUpButton() {
+  if (scrollY > 1000) {
+    upButton.classList.add('show')
+  } else {
+    upButton.classList.remove('show')
   }
 }
 

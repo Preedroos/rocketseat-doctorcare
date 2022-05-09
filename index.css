@@ -2,12 +2,14 @@
 
 :root {
   /* COLORS */
-  --primary-color: #00856f;
-  --headline: #212529;
-  --paragraph: #495057;
-  --bg-beige: #fffaf1;
-  --bg-green-light: #dce9e2;
-  --bg-green-light-2: #f7f9f9;
+  --hue: 300;
+  --primary-color: hsl(var(--hue), 100%, 26%);
+  --gray-headline: hsl(210, 11%, 15%);
+  --gray-paragraph: hsl(210, 9%, 31%);
+  --brand-beige: hsl(39, 100%, 97%);
+  --primary-color-light: hsl(calc(var(--hue) + 22), 23%, 89%);
+  --primary-color-light-02: hsl(calc(var(--hue) + 10), 14%, 97%);
+  --primary-color-hover: hsl(var(--hue), 100%, 14%);
 
   /* SIZES */
   --mobile-width-screen: 37.5rem;
@@ -31,7 +33,7 @@ html {
 
 body {
   overflow: overlay;
-  background-color: var(--bg-green-light-2);
+  background-color: var(--primary-color-light-02);
 }
 
 header {
@@ -47,21 +49,21 @@ h1 {
 }
 
 h2 {
-  color: var(--headline);
+  color: var(--gray-headline);
   font-weight: 700;
   font-size: 3.4rem;
   margin-bottom: 2.4rem;
 }
 
 h3 {
-  color: var(--headline);
+  color: var(--gray-headline);
   font-weight: 700;
   font-size: 3rem;
   margin-bottom: 2.4rem;
 }
 
 h4 {
-  color: var(--headline);
+  color: var(--gray-headline);
   font-weight: 700;
   font-size: 2.4rem;
   margin-block: 1.6rem;
@@ -69,7 +71,7 @@ h4 {
 
 p {
   font-size: 1.6rem;
-  color: var(--paragraph);
+  color: var(--gray-paragraph);
 }
 
 a {
@@ -80,6 +82,24 @@ ul {
   list-style-type: none;
 }
 
+/*==================== SVG COLORS ====================*/
+
+svg path[fill*='#00856F'] {
+  fill: var(--primary-color);
+}
+
+svg path[stroke*='#00856F'] {
+  stroke: var(--primary-color);
+}
+
+svg circle[fill*='#00856F'] {
+  fill: var(--primary-color);
+}
+
+svg circle[fill*='#DCE9E2'] {
+  fill: var(--primary-color-light);
+}
+
 .wrapper {
   padding-inline: 2.4rem;
   margin-inline: auto;
@@ -88,7 +108,6 @@ ul {
 
 .button {
   display: flex;
-  width: 263px;
   padding: 1.6rem 3.2rem;
   border-radius: 40px;
   text-transform: uppercase;
@@ -98,8 +117,16 @@ ul {
 
 .content .button {
   margin-bottom: 3.75rem;
+  align-items: center;
   justify-content: space-between;
   background-color: var(--primary-color);
+  width: fit-content;
+  gap: 1.6rem;
+  transition: 200ms;
+}
+
+.content .button:hover {
+  background-color: var(--primary-color-hover);
 }
 
 .content .button p {
@@ -110,7 +137,7 @@ ul {
 /*==================== NAVIGATION ====================*/
 
 #navigation {
-  transition: 400ms;
+  transition: 200ms;
   position: fixed;
   top: 0;
   left: 50%;
@@ -173,6 +200,10 @@ body.menu-expanded .logo svg path {
   fill: white;
 }
 
+body.menu-expanded path[fill*='#00856F'] {
+  fill: var(--primary-color);
+}
+
 body.menu-expanded .menu {
   display: flex;
   flex-direction: column;
@@ -196,7 +227,7 @@ body.menu-expanded ul {
 body.menu-expanded a {
   font-size: 2.4rem;
   font-weight: 700;
-  color: var(--bg-beige);
+  color: var(--brand-beige);
 }
 
 body.menu-expanded .button {
@@ -205,6 +236,12 @@ body.menu-expanded .button {
   background-color: white;
   color: var(--primary-color);
   font-size: 1.8rem;
+  transition: 200ms;
+}
+
+body.menu-expanded .button:hover {
+  color: var(--brand-beige);
+  background-color: var(--primary-color-hover);
 }
 
 body.menu-expanded .social-links {
@@ -223,7 +260,7 @@ body.menu-expanded .social-links {
   left: 0;
   width: 100%;
   height: calc(108rem + 4rem);
-  background-color: var(--bg-green-light);
+  background-color: var(--primary-color-light);
 }
 
 #home {
@@ -254,7 +291,7 @@ body.menu-expanded .social-links {
   align-items: center;
   text-align: center;
   width: 32.7rem;
-  background-color: var(--bg-beige);
+  background-color: var(--brand-beige);
   gap: 6rem;
   border-radius: 0.5rem;
   padding-block: 4rem;
@@ -286,7 +323,7 @@ body.menu-expanded .social-links {
   width: 32.7rem;
   padding: 2.4rem;
   background-color: white;
-  border: 1px solid var(--bg-green-light);
+  border: 1px solid var(--primary-color-light);
   border-radius: 6px;
 }
 
@@ -303,12 +340,12 @@ body.menu-expanded .social-links {
   left: 0;
   width: 100%;
   height: calc(108rem + 4rem);
-  background-color: var(--bg-green-light);
+  background-color: var(--primary-color-light);
 }
 
 #about {
   padding-block: 10rem;
-  background-color: var(--bg-beige);
+  background-color: var(--brand-beige);
 }
 
 #about header {
@@ -317,6 +354,10 @@ body.menu-expanded .social-links {
 
 #about .content p {
   margin-bottom: 6rem;
+}
+
+#about .content img {
+  width: 100%;
 }
 
 /*==================== CONTACT ====================*/
@@ -345,6 +386,7 @@ body.menu-expanded .social-links {
 }
 
 #contact .content img {
+  width: 100%;
   margin-block: 1rem;
 }
 
@@ -364,7 +406,7 @@ footer .logo path {
 }
 
 footer p {
-  color: white;
+  color: var(--brand-beige);
   margin-bottom: 1.2rem;
 }
 
@@ -374,4 +416,20 @@ footer .social-links {
   justify-content: space-between;
   width: 50%;
   margin-top: 3rem;
+}
+
+#upButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  transition: 200ms;
+  transform: translateY(100%);
+}
+
+#upButton.show {
+  transform: translateY(0);
+}
+
+#upButton.show {
+  transform: translateY(0);
 }
