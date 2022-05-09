@@ -1,3 +1,11 @@
+randomColor()
+
+function randomColor() {
+  color = Math.ceil(Math.random() * 10) * 100
+  document.documentElement.style.setProperty('--hue', color)
+  console.log(color)
+}
+
 function onScroll() {
   showAltNav()
   showUpButton()
