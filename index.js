@@ -1,4 +1,4 @@
-randomColor()
+//randomColor()
 
 function randomColor() {
   color = Math.ceil(Math.random() * 10) * 100
@@ -74,5 +74,5 @@ ScrollReveal({
   distance: '50px',
   duration: 1500
 }).reveal(`
-header p,
+header > p,
 #about p`)
