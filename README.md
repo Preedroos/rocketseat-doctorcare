@@ -1,1 +1,3 @@
-![Screenshot_1](https://user-images.githubusercontent.com/69660117/167068439-f99e117c-9f37-4d2d-88e1-a10015861b42.png)
+HI! If you want to look at my website, click at the link below:
+
+https://github.com/Preedroos/nlw-doctorcare.git
