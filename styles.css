@@ -2,7 +2,7 @@
 
 :root {
   /* COLORS */
-  --hue: 300;
+  --hue: 500;
   --primary-color: hsl(var(--hue), 100%, 26%);
   --gray-headline: hsl(210, 11%, 15%);
   --gray-paragraph: hsl(210, 9%, 31%);
@@ -75,6 +75,7 @@ p {
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -568,7 +569,7 @@ footer .social-links {
     grid-area: grid-a;
     text-align: left;
   }
-  
+
   #home .grid-a .button {
     margin-inline: 0;
   }
@@ -647,7 +648,7 @@ footer .social-links {
   #contact .grid-a {
     grid-area: grid-a;
   }
-  
+
   #contact .grid-b {
     grid-area: grid-b;
   }
