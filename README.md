@@ -1,5 +1,6 @@
-HI! If you want to look at my website, click at the link below:
+# nlw-doctorcare
+[Live preview url](https://preedroos.github.io/nlw-doctorcare/)
 
-Webpage: https://preedroos.github.io/nlw-doctorcare/
+#### This web page was developed during Rocketseat's event aka Next Level Week. The brand of the site is illustrative (sample).
 
-Figma: https://www.figma.com/file/P4PUcp1qOuKhHu1gfbh355/DoctorCare-(Community)
+<a href="https://www.figma.com/file/P4PUcp1qOuKhHu1gfbh355/DoctorCare-(Community)"><img src="https://github.com/devicons/devicon/blob/master/icons/figma/figma-original.svg" alt="Figma icon" width="24" />Figma</a>
