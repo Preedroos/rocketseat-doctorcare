@@ -1,5 +1,4 @@
 # nlw-doctorcare
-[Live preview url](https://preedroos.github.io/nlw-doctorcare/)
 
 #### This web page was developed during Rocketseat's event aka Next Level Week. The brand of the site is illustrative (sample).
 
